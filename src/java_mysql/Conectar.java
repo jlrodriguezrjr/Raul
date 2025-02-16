@@ -15,9 +15,9 @@ import javax.swing.JOptionPane;
 
 public class Conectar {
 
-    public static final String URL = "jdbc:mysql://localhost:3306/base_alumnos";
-    public static final String USER = "root";
-    public static final String CLAVE = "Raulpro147852$";
+    public static final String URL = "jdbc:mysql://192.168.1.6:3306/base_alumnos";
+    public static final String USER = "jr";
+    public static final String CLAVE = "$Wvqe87ia";
     public Connection con;
 
     public Connection getConexion() {
@@ -34,9 +34,10 @@ public class Conectar {
         if (con != null) {
             try {
                 con.close();
-                con=null;
+                con = null;
+                JOptionPane.showMessageDialog(null, "Conexion cerrada con exito");
             } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, "Error:"+ e.getMessage());
+                JOptionPane.showMessageDialog(null, "Error:" + e.getMessage());
             }
         }
     }
